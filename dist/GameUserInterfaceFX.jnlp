@@ -11,11 +11,11 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="GameUserInterfaceFX.jar" size="2889715" download="eager" />
+    <jar href="GameUserInterfaceFX.jar" size="2889484" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="GameUserInterfaceFX" >
     <param name="requiredFXVersion" value="2.2+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="javafxapplication1.App"  name="GameUserInterfaceFX" />
+  <jfx:javafx-desc  width="800" height="600" main-class="ViewControler.App"  name="GameUserInterfaceFX" />
   <update check="always"/>
 </jnlp>
