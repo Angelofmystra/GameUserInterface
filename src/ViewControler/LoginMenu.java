@@ -129,9 +129,6 @@ public class LoginMenu {
 
     }
 
-    LoginMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
         public EventHandler loginClientHandler() {
         EventHandler evh = new EventHandler<ActionEvent>() {
             @Override
