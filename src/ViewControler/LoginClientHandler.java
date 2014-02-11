@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package javafxapplication1;
+package ViewControler;
 
 /**
  *
  * @author bertrandbrompton
  */
-public class loginMenu {
+class LoginClientHandler {
     
 }

@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package javafxapplication1;
+package ViewControler;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -147,7 +147,7 @@ public class gameClient {
 
 
         primaryStage.setScene(gameclient);
-        String image = Test.class.getResource("background2.jpg").toExternalForm();
+        String image = App.class.getResource("background2.jpg").toExternalForm();
         gamestack.setStyle("-fx-background-image: url('" + image + "'); -fx-background-position: center center; -fx-background-repeat: stretch;");
         //primaryStage.setScene(new Scene(VBoxBuilder.create().children(new Text("League of Legends Client")).build()));
         primaryStage.sizeToScene();

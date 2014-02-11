@@ -1,10 +1,11 @@
-package javafxapplication1;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+package ViewControler;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -16,32 +17,30 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.RowConstraints;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.layout.VBoxBuilder;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class Test extends Application {
-    private Stage primaryStage;
+/**
+ *
+ * @author bertrandbrompton
+ */
+public class LoginMenu {
+    Stage primaryStage;
     final Label message = new Label("");
     final PasswordField pb = new PasswordField();
     final TextField uf = new TextField();
     final CheckBox checkbox = new CheckBox("Remember Username");
-    @Override
-    public void start(Stage primaryStage) {
+    
+    public LoginMenu(Stage primaryStage){
         this.primaryStage = primaryStage;
         //this.primaryStage.setFullScreen(true);
         Button btn = new Button("Login");
-        btn.setOnAction(loginClienteHandler());
+        btn.setOnAction(loginClientHandler());
          
         checkbox.setSelected(true);
         Button btn2 = new Button("Forgot your password");
@@ -99,7 +98,7 @@ public class Test extends Application {
                 pb.clear();
             }
         });
-        String image = Test.class.getResource("background.jpg").toExternalForm();
+        String image = App.class.getResource("background.jpg").toExternalForm();
         root.setStyle("-fx-background-image: url('" + image + "'); -fx-background-position: center center; -fx-background-repeat: stretch;");          		
 //        Image imagez = new Image("background.jpg");
 //        ImageView iv1 = new ImageView();
@@ -127,9 +126,13 @@ public class Test extends Application {
         primaryStage.setTitle("League of Legends Login Client");
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 
-    public EventHandler loginClienteHandler() {
+    LoginMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        public EventHandler loginClientHandler() {
         EventHandler evh = new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -153,7 +156,7 @@ public class Test extends Application {
         };
         return evh;
     }
-    public EventHandler forgotPasswordHandler(){
+        public EventHandler forgotPasswordHandler(){
         EventHandler evh = new EventHandler<ActionEvent>() {
 
 			@Override
@@ -195,8 +198,5 @@ public class Test extends Application {
         };
         return evh;    	
     }
-    
-    public static void main(String[] args) {
-        launch(args);
-    }
+
 }
